@@ -4,15 +4,23 @@
 
 {% block main %}
 
-<h1>Creatures</h1>
+<h1 class="text-center my-4" id="decorate">CREATURES</h1>
 
-{% for creature in creatures %}
-<li class="list-group list-group-item d-flex justify-content-center w-50">
-  {{ creature.name }}
-  <a href="{% url 'creatures:creature-detail' creature.slug %}">
-    <button type="button" class="btn btn-outline-primary">Details</button>
-  </a>
-</li>
-{% endfor %}
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+    {% for creature in creatures %}
+    <div class="col">
+      <div class="card shadow-sm">
+        <h5 class="card-header text-center">{{ creature.name }}</h5>
+        <div class="card-body text-center">
+          <a href="{% url 'creatures:creature-detail' creature.slug %}">
+            <button type="button" class="btn btn-outline-primary">Details</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
 
 {% endblock main %}

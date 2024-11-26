@@ -4,17 +4,25 @@
 
 {% block main %}
 
-<h2>{{ creature.name }}</h2>
-<ul>
-  <li><strong>Type:</strong> {{ creature.type1 }}</li>
-  <li><strong>Attack:</strong> {{ creature.attack }}</li>
-  <li><strong>Defense:</strong> {{ creature.defense }}</li>
-  <li><strong>Speed:</strong> {{ creature.speed }}</li>
-  <li><strong>Generation:</strong> {{ creature.generation }}</li>
-</ul>
+<div class="container my-5 px-5">
+  <div class="card w-50 shadow-sm">
+    <div class="card-body">
+      <h2 class="card-title text-center mb-4">{{ creature.name }}</h2>
+      <ul class="list-unstyled">
+        <li><strong>Type:</strong> {{ creature.type1 }}</li>
+        <li><strong>Attack:</strong> {{ creature.attack }}</li>
+        <li><strong>Defense:</strong> {{ creature.defense }}</li>
+        <li><strong>Speed:</strong> {{ creature.speed }}</li>
+        <li><strong>Generation:</strong> {{ creature.generation }}</li>
+      </ul>
+    </div>
+  </div>
 
-<a href="{% url 'creatures:creature-list' %}">
-  <button type="button" class="btn btn-outline-secondary w-30 ">Back to main page</button>
-</a>
+  <div class="text-center mt-4">
+    <a href="{% url 'creatures:creature-list' %}">
+      <button type="button" class="btn btn-secondary w-25">Back to main page</button>
+    </a>
+  </div>
+</div>
 
 {% endblock main %}

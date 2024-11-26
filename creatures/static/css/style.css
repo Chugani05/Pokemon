@@ -1,0 +1,8 @@
+body {
+  background: url(../imgs/wallpaper.webp) no-repeat center fixed;
+    background-size: cover;
+}
+
+#decorate {
+  font-weight: bold;
+}
