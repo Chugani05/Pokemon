@@ -1,0 +1,18 @@
+{% extends "creatures/base.html" %}
+
+{% block title %}Pokemons | Creatures{% endblock title %}
+
+{% block main %}
+
+<h1>Creatures</h1>
+
+{% for creature in creatures %}
+<li class="list-group list-group-item d-flex justify-content-center w-50">
+  {{ creature.name }}
+  <a href="{% url 'creatures:creature-detail' creature.slug %}">
+    <button type="button" class="btn btn-outline-primary">Details</button>
+  </a>
+</li>
+{% endfor %}
+
+{% endblock main %}
