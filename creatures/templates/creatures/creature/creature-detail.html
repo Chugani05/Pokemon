@@ -5,16 +5,18 @@
 {% block main %}
 
 <div class="container my-5 px-5">
-  <div class="card w-50 shadow-sm">
-    <div class="card-body">
-      <h2 class="card-title text-center mb-4">{{ creature.name }}</h2>
-      <ul class="list-unstyled">
-        <li><strong>Type:</strong> {{ creature.type1 }}</li>
-        <li><strong>Attack:</strong> {{ creature.attack }}</li>
-        <li><strong>Defense:</strong> {{ creature.defense }}</li>
-        <li><strong>Speed:</strong> {{ creature.speed }}</li>
-        <li><strong>Generation:</strong> {{ creature.generation }}</li>
-      </ul>
+  <div class="d-flex justify-content-center">
+    <div class="card w-50 shadow-sm">
+      <div class="card-body">
+        <h2 class="card-title text-center mb-4">{{ creature.name }}</h2>
+        <ul class="list-unstyled">
+          <li><strong>Type:</strong> {{ creature.type1 }}</li>
+          <li><strong>Attack:</strong> {{ creature.attack }}</li>
+          <li><strong>Defense:</strong> {{ creature.defense }}</li>
+          <li><strong>Speed:</strong> {{ creature.speed }}</li>
+          <li><strong>Generation:</strong> {{ creature.generation }}</li>
+        </ul>
+      </div>
     </div>
   </div>
 

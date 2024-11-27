@@ -7,6 +7,13 @@ sh:
 load-creatures:
     ./manage.py loaddata pokemon.json
 
+mm app="":
+    ./manage.py makemigrations
+
+m app="":
+    ./manage.py migrate
+
+
 # https://medium.com/@mustahibmajgaonkar/how-to-reset-django-migrations-6787b2a1e723
 # https://stackoverflow.com/a/76300128
 # Remove migrations and database. Reset DB artefacts.
